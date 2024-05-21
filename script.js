@@ -36,7 +36,8 @@ document.querySelector('#form').addEventListener('submit', (event) => {
 	// Send user message to the server using AJAX
 	$.ajax({
 		type: 'POST',
-		url: 'http://localhost:5005/webhooks/rest/webhook',
+		//url: 'http://localhost:5005/webhooks/rest/webhook',
+		url: 'https://1971-105-112-190-147.ngrok-free.app -> http://localhost:5005/webhooks/rest/webhook',
 		contentType: 'application/json',
 		data: JSON.stringify({ message: userMessage }),
 		success: function (data) {
