@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Manrope', sans-serif;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 2rem;
+	min-width: 320px;
+	background-color: #eee;
+	display: flex;
+	align-items: center;
+	padding: 2rem;
+	height: 100vh;
+}
+input {
+	width: 100%;
+	border-radius: 24px;
+	padding: 1.5rem 14rem 1.5rem 2rem;
+	border: 1px solid #e3ecf0;
+	outline: none;
+	font-size: 1.5rem;
+	font-size: clamp(1rem, 0.5rem + 1.6vw, 1.5rem);
+	font-weight: 600;
+}
+
+input:focus,
+button:focus {
+	border: 1px solid #5db86c;
+}
+
+header {
+	display: none;
+	background-color: white;
+	padding: 1rem 4rem;
+	border-radius: 16px 16px 0 0;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid #eee;
+}
+header img {
+	width: 18rem;
+	width: clamp(14rem, 9rem + 16vw, 18rem);
+}
+header button,
+aside button#close-nav-btn {
+	display: inline-block;
+	font-size: 1.5rem;
+	background: transparent;
+	color: var(--color-white);
+	cursor: pointer;
+	flex-shrink: 0;
+	border: none;
+	outline: none;
+}
+header button svg {
+	width: 3.2rem;
+	height: auto;
+}
+aside button#close-nav-btn svg {
+	width: 2.7rem;
+	height: auto;
+}
+
+.container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+aside {
+	width: 100%;
+	max-width: 350px;
+	overflow: auto;
+	background-color: white;
+	border-radius: 16px 0 0 16px;
+	padding: 4rem 4rem 1.5rem;
+	border-right: 2px solid #eee;
+}
+aside img {
+	max-width: 100%;
+}
+aside p {
+	margin-top: 2rem;
+	line-height: 1.7;
+}
+aside button#close-nav-btn {
+	display: none;
+}
+section {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	border-radius: 0 16px 16px 0;
+	padding: 4rem 4rem 1.5rem;
+	position: relative;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	border-left: 2px solid #eee;
+}
+
+.mssgsCon {
+	overflow: auto;
+	padding: 0 5px;
+}
+.time {
+	color: lightGrey;
+	font-size: 0.8rem;
+}
+.mssg {
+	width: max-content;
+	max-width: 500px;
+	padding: 16px;
+	background-color: #d3e7d6;
+	border-radius: 8px 8px 0 8px;
+	font-weight: 700;
+	font-size: 1.6rem;
+	font-size: clamp(1rem, 0.4rem + 1.92vw, 1.6rem);
+	margin-bottom: 8px;
+}
+.userMssg {
+	display: flex;
+	gap: 24px;
+}
+.userMssg .mssg {
+	background-color: #f5f6f9;
+	border-radius: 8px 8px 8px 0;
+}
+.myMssg {
+	width: max-content;
+	margin-left: auto;
+	display: flex;
+	gap: 24px;
+}
+.myMssg .time {
+	text-align: right;
+}
+.userMssg,
+.myMssg {
+	margin-bottom: 14px;
+}
+.initials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	color: white;
+	background-color: #5db86c;
+	width: 36px;
+	height: 36px;
+	font-weight: 600;
+}
+
+.mssgComp {
+	background-color: rgba(227, 236, 240, 0.5);
+	padding: 12px 16px;
+	color: lightGrey;
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.mssgComp.unread .header {
+	color: #143a4f;
+}
+.mssgComp:last-child {
+	margin-bottom: 0;
+}
+.mssgComp > div:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.mssgComp > div {
+	margin-bottom: 4px;
+}
+.mssgComp > span {
+	display: inline-block;
+	font-size: 0.8rem;
+	font-weight: 700;
+	padding: 4px 6px;
+}
+form {
+	padding: 2rem 0;
+	margin-top: auto;
+}
+form div {
+	position: relative;
+}
+form button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: max-content;
+	padding: 0 4rem;
+	padding: 0 clamp(2.5rem, 1rem + 4.8vw, 4rem);
+	display: flex;
+	align-items: center;
+	background-color: #5db86c;
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 800;
+	letter-spacing: -0.3px;
+	font-family: 'Manrope', sans-serif;
+	cursor: pointer;
+	border-radius: 24px;
+	border: none;
+	outline: none;
+}
+form button:hover {
+	background-color: #80c88c;
+}
+@media screen and (max-width: 1000px) {
+	body {
+		display: block;
+	}
+	header {
+		display: flex;
+	}
+	.container {
+		height: calc(100% - 9rem);
+	}
+	aside {
+		position: fixed;
+		left: -100%;
+		right: 0;
+		top: 0;
+		height: 100vh;
+		z-index: 10;
+		max-width: 100%;
+		display: grid;
+		padding: 0rem;
+		background-color: rgba(0, 0, 0, 0.5);
+		border-radius: 0;
+	}
+	aside.active {
+		left: 0;
+	}
+	aside div {
+		max-width: 350px;
+		padding: 4rem 4rem 1.5rem;
+		border-right: 2px solid #eee;
+		background-color: white;
+		overflow: auto;
+	}
+	aside button#close-nav-btn {
+		display: block;
+		margin-left: auto;
+		margin-bottom: 1rem;
+	}
+	section {
+		border-radius: 0;
+		border-left: unset;
+		border-radius: 0 0 16px 16px;
+		padding: 2rem 2rem 0.5rem;
+	}
+}
+@media screen and (max-width: 600px) {
+	.initials {
+		display:none;
+	}
+}

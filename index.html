@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ChatGuru</title>
+		<link rel="stylesheet" href="styles.css" />
+
+		<script src="./script.js" defer></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<img src="./logo.jpeg" alt="ChatGuru" />
+			<button id="open-nav-btn">
+				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M33.3333 11.6667L6.66658 11.6667" stroke="#070D19" stroke-width="2" stroke-linecap="round" />
+					<path d="M33 20L15 20" stroke="#070D19" stroke-width="2" stroke-linecap="round" />
+					<path d="M33 28L22 28" stroke="#070D19" stroke-width="2" stroke-linecap="round" />
+				</svg>
+			</button>
+		</header>
+
+		<div class="container">
+			<aside class="active">
+				<div>
+					<button id="close-nav-btn">
+						<svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M8.21949 28.0255L16.4759 19.7707L24.6163 27.9785C25.229 28.5974 26.2208 28.5974 26.832 27.9785C27.4431 27.3611 27.4431 26.3582 26.832 25.7408L18.7025 17.544L27.0231 9.22498C27.6437 8.60759 27.6437 7.60473 27.0231 6.98734C26.4042 6.36996 25.3982 6.36996 24.7792 6.98734L16.4712 15.2939L8.18659 6.94033C7.5739 6.32295 6.58201 6.32295 5.97089 6.94033C5.35821 7.55772 5.35821 8.56058 5.97089 9.17953L14.2445 17.5221L5.97716 25.7894C5.35664 26.4068 5.35664 27.4097 5.97716 28.0271C6.59454 28.6429 7.59897 28.6429 8.21949 28.0255Z"
+								fill="#070D19"
+							/>
+						</svg>
+					</button>
+					<img src="./logo.jpeg" alt="ChatGuru" />
+					<p>
+						Welcome to the ChatGuru pilot test for UNILAG's Faculty of Engineering students.
+						Share your questions and interests to help enhance ChatGuru's capabilities in academic advice,
+						school services, policies and procedures, and student life. Your input is vital to shape ChatGuru's development.<br><br>
+						After interaction, kindly evaluate ChatGuru's performance <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFiarX9rKEZF5hQp6UPM8Pm0BRG3y2BRgG2E6xzzp6eKaZPg/viewform?usp=sf_link">here</a>.<br><br>
+						Thank you for participating in this initiative.
+					</p>
+				</div>
+			</aside>
+			<section>
+				<div class="mssgsCon" id="message-con">
+					<div class="userMssg">
+						<div class="initials">CG</div>
+						<div class="group">
+							<div class="mssg">Hi there! How can I help you today?</div>
+						</div>
+					</div>
+				</div>
+
+				<form id="form">
+					<div>
+						<input id="input" type="text" name="message" autocomplete="off" placeholder="Send ChatGuru a message" required />
+						<button>Send</button>
+					</div>
+				</form>
+			</section>
+		</div>
+	</body>
+</html>
